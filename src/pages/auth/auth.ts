@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 
-import { HomePage } from '../home/home';
+@IonicPage()
 
 @Component({
   selector: 'page-auth',
@@ -14,6 +14,6 @@ export class AuthPage {
   }
 
   login(): void {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot('MenuPage');
   }
 }

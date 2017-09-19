@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {IonicPage, NavController } from 'ionic-angular';
 
 import { ProductsProvider } from '../../providers/products/products';
 
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -17,7 +18,7 @@ export class HomePage implements OnInit{
 
   getData() {
       this.productProvider.getProducts({}).then((resp: { type: String, data: any }) => {
-          alert(JSON.stringify(resp));            
+          console.log(JSON.stringify(resp));            
       }).catch((error) => {
           alert(JSON.stringify(error));
       });
