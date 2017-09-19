@@ -21,7 +21,7 @@ export class MenuPage {
 		this.pages = [
 			{ title: 'Home', component: 'HomePage' },
 			{ title: 'List', component: 'ListPage' },
-			{ title: 'Logout', component: 'MyApp'}
+			{ title: 'Logout', component: 'AuthPage'}
 		];
 	}
 
@@ -31,8 +31,8 @@ export class MenuPage {
 
 	openPage(page) {
 		console.log("Root Page: ", page);
-		if(page.component == 'MyApp') {
-			this.app.getRootNav().setRoot('MyApp');
+		if(page.component == 'AuthPage') {
+			this.app.getRootNav().setRoot('AuthPage');
 		} else {
 			this.rootPage = page.component;
 		}

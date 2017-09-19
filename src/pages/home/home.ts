@@ -9,7 +9,6 @@ import { ProductsProvider } from '../../providers/products/products';
   templateUrl: 'home.html'
 })
 export class HomePage implements OnInit{
-
   constructor(
     public navCtrl: NavController,
     private productProvider: ProductsProvider
